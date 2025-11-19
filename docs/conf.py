@@ -112,7 +112,13 @@ if not on_rtd:  # only import and set the theme if we're building docs locally
     # html_sidebars = {}
 
 # otherwise, readthedocs.org uses their theme by default, so no need to specify it
+# -- Options for HTML output -------------------------------------------------
 
+# The theme to use for HTML and HTML Help pages.  See the documentation for
+# a list of builtin themes.
+#
+# html_theme = 'alabaster'
+html_theme = 'sphinx_rtd_theme'
 
 # -- Options for HTMLHelp output ---------------------------------------------
 

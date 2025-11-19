@@ -1,18 +1,20 @@
-.DEFAULT_GOAL := doc
-SHELL := /bin/bash
+# Minimal makefile for Sphinx documentation
+#
 
-ECHO ?= echo -e
+# You can set these variables from the command line, and also
+# from the environment for the first two.
+SPHINXOPTS    ?=
+SPHINXBUILD   ?= sphinx-build
+SOURCEDIR     = docs
+BUILDDIR      = /docs/_build/
 
-.PHONY: init doc apidoc cleandoc
+# Put it first so that "make" without argument is like "make help".
+help:
+	@$(SPHINXBUILD) -M help "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 
-init:
-	@cd docs; pip install -r requirements.txt
+.PHONY: help Makefile
 
-doc: cleandoc
-	@cd docs; make html
-
-apidoc: doc
-
-cleandoc:
-	@-rm -r ./docs/_build/
-	@-rm -r ./docs/_doxygen/
+# Catch-all target: route all unknown targets to Sphinx using the new
+# "make mode" option.  $(O) is meant as a shortcut for $(SPHINXOPTS).
+%: Makefile
+	@$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
