@@ -3,6 +3,24 @@
 Windows 源码安装
 =====================
 
+.. only:: html
+
+  +-----------------+
+  | Windows 10      |
+  +=================+
+  | |build_passing| |
+  +-----------------+
+
+  .. |build_passing| image:: https://img.shields.io/badge/build-passing-brightgreen.svg?style=flat
+
+.. only:: latex
+
+  +-----------------+
+  | Windows 10      |
+  +=================+
+  | ✓               |
+  +-----------------+
+
 .. tip::
 
   Windows 不直接提供 Visual Studio ``*.sln`` 工程文件，需要用 CMake 来构建生成。一是 CMake 跨平台、易配置、可持续维护，二是第三方代码（glog, OpenCV）也都是用的 CMake 构建。
@@ -15,6 +33,8 @@ CMake（提供构建）
 ~~~~~~~~~~~~~~~~~
 
 * `CMake <https://cmake.org/download/>`_，用于构建编译（必要）。
+* `Git <https://git-scm.com/downloads>`_，用于获取代码（可选）。
+* `Doxygen <http://www.stack.nl/~dimitri/doxygen/download.html>`_，用于生成文档（可选）。
 
 安装好上述工具后，在命令提示符（Command Prompt）里确认可运行此些命令：
 
@@ -22,6 +42,12 @@ CMake（提供构建）
 
   >cmake --version
   cmake version 3.10.1
+
+  >git --version
+  git version 2.11.1.windows.1
+
+  >doxygen --version
+  1.8.13
 
 Visual Studio（提供编译）
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -31,6 +57,7 @@ Visual Studio（提供编译）
   * `Visual Studio 2017 <https://my.visualstudio.com/Downloads?q=Visual Studio 2017>`_
   * `Visual Studio 2015 <https://my.visualstudio.com/Downloads?q=Visual Studio 2015>`_
 
+* `Windows 10 SDK <https://developer.microsoft.com/en-US/windows/downloads/windows-10-sdk>`_
 
 安装好 Visual Studio 后，在其 Visual Studio Command Prompt 里确认可运行如下命令：
 
@@ -49,6 +76,29 @@ Visual Studio（提供编译）
   .. image:: ../../images/sdk/vs_cmd_menu.png
     :width: 30%
 
+
+  也可以从 Visual Studio 的工具菜单里打开，
+
+  .. image:: ../../images/sdk/vs_cmd.png
+    :width: 40%
+
+
+  但如 Visual Studio 2015 工具菜单里可能没有，可以自己添加个。
+
+  打开 Tools 的 External Tools… ，然后 Add 如下内容：
+
+  ================= =======================================================================================
+  Field             Value
+  ================= =======================================================================================
+  Title             Visual Studio Command Prompt
+  Command           ``C:\Windows\System32\cmd.exe``
+  Arguments         ``/k "C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\Tools\VsDevCmd.bat"``
+  Initial Directory ``$(SolutionDir)``
+  ================= =======================================================================================
+
+  Visual Studio Command Prompt 里就可以用编译命令 ``cl`` ``link`` ``lib`` ``msbuild`` 等(需要先完成``MSYS2``和``获取代码``步骤)，
+
+  .. image:: ../../images/sdk/vs_cmd_test.png
 
 MSYS2（提供 Linux 命令）
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -83,8 +133,27 @@ MSYS2（提供 Linux 命令）
 
 .. code-block:: bat
 
-  git clone https://github.com/Cyperstereo/CyperstereoSDK.git
+  git clone https://github.com/slightech/MYNT-EYE-S-SDK.git
 
+准备依赖
+--------
+
+.. code-block:: bat
+
+  >cd <sdk>  # <sdk> 是指sdk路径
+  >make init
+  Make init
+  Init deps
+  Install cmd: pacman -S
+  Install deps: git clang-format
+  pacman -S clang-format (not exists)
+  error: target not found: clang-format
+  pip install --upgrade autopep8 cpplint pylint requests
+  ...
+  Init git hooks
+  ERROR: clang-format-diff is not installed!
+  Expect cmake version >= 3.0
+  cmake version 3.10.1
 
 * `OpenCV <https://opencv.org/>`_
 
@@ -132,30 +201,30 @@ MSYS2（提供 Linux 命令）
 
   不然， CMake 会提示找不到 OpenCV 。如果不想依赖 OpenCV ，请阅读 :ref:`sdk_without_opencv` 。
 
-编译：
+编译并安装：
 
 .. code-block:: bat
 
-  cd ~/CyperstereoSDK/samples
-  mkdir build
-  cd build
-  cmake -G "Visual Studio 15 2017 Win64" ..
-  msbuild ALL_BUILD.vcxproj /property:Configuration=Release
+  cd <sdk>
+  make install
 
+最终，默认会安装在 ``<sdk>/_install`` 目录。
+
+编译样例
+--------
+
+.. code-block:: bat
+
+  cd <sdk>
+  make samples
 
 运行样例：
 
-.. code-block:: bash
+.. code-block:: bat
 
-  #save image and imu samples 保存图像和imu
-  mkdir left
-  mkdir right
-  mkdir imu
-  .\save_image_imu
+  .\samples\_output\bin\api\camera_a.bat
 
-  #capture image and imu samples 采集显示图像和imu
-  .\capture_image_imu
-
+教程样例，请阅读 :ref:`data` 和 :ref:`ctrl` 。
 
 .. tip::
 
@@ -164,3 +233,29 @@ MSYS2（提供 Linux 命令）
   如果直接运行 ``exe`` 的话，可能会报 ``dll`` 找不到。说明你需要将 ``<sdk>\_install\bin`` ``%OPENCV_DIR%\bin`` 加入到系统环境变量 ``PATH`` 里。
 
   OpenCV 如何设定环境变量，可见官方文档 `Set the OpenCV environment variable and add it to the systems path <https://docs.opencv.org/master/d3/d52/tutorial_windows_install.html#tutorial_windows_install_path>`_ 。
+
+编译工具
+--------
+
+.. code-block:: bat
+
+  cd <sdk>
+  make tools
+
+工具和脚本的使用，后续会有介绍。
+
+.. tip::
+
+  脚本为 Python 实现，需要先安装 Python 及其包管理工具 pip ，然后再如下安装依赖：
+
+  .. code-block:: bat
+
+    cd <sdk>\tools
+    pip install -r requirements.txt
+
+  注：MSYS2 里也带了 Python ，但测试未能安装上 matplotlib 。
+
+结语
+----
+
+工程要引入 SDK 的话，CMake 可参考 ``samples/CMakeLists.txt`` 里的配置。不然，就是直接引入安装目录里的头文件和动态库。

@@ -8,4 +8,4 @@
    product_surface
    product_spec
    imu_coord
-   gnss
+   appendix
