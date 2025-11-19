@@ -5,7 +5,7 @@ build:
     python: "3.8"
 sphinx:
   configuration: docs/conf.py
-
+  builder: html
 formats:
   - pdf
   - epub
