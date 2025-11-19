@@ -24,7 +24,7 @@ copyright = '2025, CyperAI'
 author = 'CyperAI'
 
 # The short X.Y version
-version = '0.0.2'
+version = '2.4.2'
 # The full version, including alpha/beta/rc tags
 release = version
 
@@ -161,19 +161,29 @@ else:
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
-
+latex_documents = [
+    (master_doc, 'CyperStereo.tex', 'CyperStereo SDK Documentation',
+     'CyperAI', 'manual'),
+]
 # -- Options for manual page output ------------------------------------------
 
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
-
+man_pages = [
+    (master_doc, 'CyperStereosdk', 'CyperStereo SDK Documentation',
+     [author], 1)
+]
 
 # -- Options for Texinfo output ----------------------------------------------
 
 # Grouping the document tree into Texinfo files. List of tuples
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
-
+texinfo_documents = [
+    (master_doc, 'CyperStereoSDK', 'CyperStereo SDK Documentation',
+     author, 'CyperStereoSDK', 'One line description of project.',
+     'Miscellaneous'),
+]
 
 # -- Options for Epub output -------------------------------------------------
 

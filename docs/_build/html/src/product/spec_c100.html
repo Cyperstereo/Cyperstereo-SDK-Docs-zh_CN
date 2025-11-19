@@ -1,0 +1,246 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>C100 &mdash; CyperStereo 2.4.2 文档</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=9d737ca6"></script>
+      <script src="../../_static/doctools.js?v=888ff710"></script>
+      <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
+      <script src="../../_static/translations.js?v=beaddf03"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+    <link rel="next" title="IMU 坐标系统" href="imu_coord.html" />
+    <link rel="prev" title="规格" href="product_spec.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            CyperStereo
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="contents.html">产品</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="product_desc.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="product_surface.html">外观</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="product_spec.html">规格</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">C100</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="imu_coord.html">IMU 坐标系统</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gnss.html">GNSS模组</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../sdk/contents.html">SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../firmware/contents.html">固件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/contents.html">使用工具支持</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../slam/contents.html">开源项目支持</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../support/contents.html">技术支持</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">CyperStereo</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="contents.html">产品</a></li>
+          <li class="breadcrumb-item"><a href="product_spec.html">规格</a></li>
+      <li class="breadcrumb-item active">C100</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/src/product/spec_c100.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="c100">
+<span id="product-spec-c100"></span><h1>C100<a class="headerlink" href="#c100" title="此标题的永久链接">¶</a></h1>
+<section id="id1">
+<h2>产品规格<a class="headerlink" href="#id1" title="此标题的永久链接">¶</a></h2>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>型号</p></td>
+<td><p>CyperStereo-C100</p></td>
+</tr>
+<tr class="row-even"><td><p>尺寸</p></td>
+<td><p>168x28mm</p></td>
+</tr>
+<tr class="row-odd"><td><p>帧率</p></td>
+<td><p>50fps</p></td>
+</tr>
+<tr class="row-even"><td><p>分辨率</p></td>
+<td><p>752x480</p></td>
+</tr>
+<tr class="row-odd"><td><p>像素尺寸</p></td>
+<td><p>6*6μm</p></td>
+</tr>
+<tr class="row-even"><td><p>基线</p></td>
+<td><p>150mm</p></td>
+</tr>
+<tr class="row-odd"><td><p>视角</p></td>
+<td><p>D:180° H:165° V:100°</p></td>
+</tr>
+<tr class="row-even"><td><p>焦距</p></td>
+<td><p>1.7mm</p></td>
+</tr>
+<tr class="row-odd"><td><p>支持IR</p></td>
+<td><p>NO</p></td>
+</tr>
+<tr class="row-even"><td><p>色彩模式</p></td>
+<td><p>Mono</p></td>
+</tr>
+<tr class="row-odd"><td><p>快门类型</p></td>
+<td><p>Global Shutter</p></td>
+</tr>
+<tr class="row-even"><td><p>功耗</p></td>
+<td><p>1.5W&#64;5V DC from USB3.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>同步精度</p></td>
+<td><p>&lt;1ms</p></td>
+</tr>
+<tr class="row-even"><td><p>IMU频率</p></td>
+<td><p>200Hz</p></td>
+</tr>
+<tr class="row-odd"><td><p>IMU型号</p></td>
+<td><p>BMI088</p></td>
+</tr>
+<tr class="row-even"><td><p>输出数据格式</p></td>
+<td><p>YUYV</p></td>
+</tr>
+<tr class="row-odd"><td><p>接口</p></td>
+<td><p>USB3.0</p></td>
+</tr>
+<tr class="row-even"><td><p>重量</p></td>
+<td><p>39g</p></td>
+</tr>
+<tr class="row-odd"><td><p>UVC MODE</p></td>
+<td><p>Yes</p></td>
+</tr>
+<tr class="row-even"><td><p>VIO</p></td>
+<td><p>里程计误差在0.1～0.5%</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id2">
+<h2>软件<a class="headerlink" href="#id2" title="此标题的永久链接">¶</a></h2>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>支持操作系统</p></td>
+<td><p>Windows、Ubuntu、ROS、ROS2、rk3588、树莓派、orin、xavier</p></td>
+</tr>
+<tr class="row-even"><td><p>SDK地址</p></td>
+<td><p><a class="reference external" href="https://github.com/Cyperstereo/CyperstereoSDK">https://github.com/Cyperstereo/CyperstereoSDK</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>开发者支持</p></td>
+<td><p>SDK</p></td>
+</tr>
+<tr class="row-even"><td><p>开源项目支持</p></td>
+<td><p>ORB_SLAM2、ORB_SLAM3、Vins-Mono、Vins-Fusion、OpenVins、Droid-slam</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id3">
+<h2>环境<a class="headerlink" href="#id3" title="此标题的永久链接">¶</a></h2>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>运行温度</p></td>
+<td><p>-15°C~55°C</p></td>
+</tr>
+<tr class="row-even"><td><p>存储温度</p></td>
+<td><p>-20°C~75°C</p></td>
+</tr>
+<tr class="row-odd"><td><p>湿度</p></td>
+<td><p>0% to 95% non-condensing</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id4">
+<h2>包装<a class="headerlink" href="#id4" title="此标题的永久链接">¶</a></h2>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>包装内容</p></td>
+<td><p>CyperStereo C100 x1   USB3.0 Cable x1</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id5">
+<h2>保修<a class="headerlink" href="#id5" title="此标题的永久链接">¶</a></h2>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>产品保修</p></td>
+<td><p>12 Months Limited Manufacturer’s Warranty</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="product_spec.html" class="btn btn-neutral float-left" title="规格" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="imu_coord.html" class="btn btn-neutral float-right" title="IMU 坐标系统" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, CyperAI.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,125 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>简介 &mdash; CyperStereo 2.4.2 文档</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=9d737ca6"></script>
+      <script src="../../_static/doctools.js?v=888ff710"></script>
+      <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
+      <script src="../../_static/translations.js?v=beaddf03"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+    <link rel="next" title="外观" href="product_surface.html" />
+    <link rel="prev" title="产品" href="contents.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            CyperStereo
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="contents.html">产品</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="product_surface.html">外观</a></li>
+<li class="toctree-l2"><a class="reference internal" href="product_spec.html">规格</a></li>
+<li class="toctree-l2"><a class="reference internal" href="imu_coord.html">IMU 坐标系统</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gnss.html">GNSS模组</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../sdk/contents.html">SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../firmware/contents.html">固件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/contents.html">使用工具支持</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../slam/contents.html">开源项目支持</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../support/contents.html">技术支持</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">CyperStereo</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="contents.html">产品</a></li>
+      <li class="breadcrumb-item active">简介</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/src/product/product_desc.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="product-desc">
+<span id="id1"></span><h1>简介<a class="headerlink" href="#product-desc" title="此标题的永久链接">¶</a></h1>
+<section id="slam">
+<h2>SLAM利器<a class="headerlink" href="#slam" title="此标题的永久链接">¶</a></h2>
+<p>CyperStereo设计时借鉴了EuRoC数据集采集设备VI-Camera, 使用了EuRoC同款sensor MT9V034, 基于此Sensor精调曝光增益参数, 搭配高质量大广角镜头, FOV可达160°, 能够适应于室内外各种复杂环境, 以及高速运动场景。同时选用了一颗高性能IMU BMI088, 使用FPGA将多传感器时间硬件同步精度降低到1ms内, 极大提升了SLAM算法各项性能指标, 使用ORBSLAM3在室外空旷场景实测300m, 回到起点误差几十cm左右, 里程计漂移误差在0.1%-0.5%内。</p>
+<p>CyperStereo是为SLAM精心打造的一款相机, 优质的数据助你在SLAM路上走的更远。可广泛应用于视觉定位导航领域, 包括:无人车和机器人的实时定位导航系统、无人机视觉定位系统、无人驾驶避障导航系统、增强虚拟现实AR VR</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="contents.html" class="btn btn-neutral float-left" title="产品" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="product_surface.html" class="btn btn-neutral float-right" title="外观" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, CyperAI.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
