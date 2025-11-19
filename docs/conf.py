@@ -19,9 +19,9 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'MYNT® EYE S SDK'
-copyright = '2019, MYNTAI'
-author = 'MYNTAI'
+project = 'CyperStereo'
+copyright = '2025, CyperAI'
+author = 'CyperAI'
 
 # The short X.Y version
 version = '2.4.2'
@@ -117,7 +117,7 @@ if not on_rtd:  # only import and set the theme if we're building docs locally
 # -- Options for HTMLHelp output ---------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'MYNTEYESSDKdoc'
+htmlhelp_basename = 'CyperStereoSDKdoc'
 
 
 # -- Options for LaTeX output ------------------------------------------------
@@ -162,20 +162,17 @@ else:
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'MYNTEYESSDK.tex', 'MYNT® EYE S SDK Documentation',
-     'MYNTAI', 'manual'),
+    (master_doc, 'CyperStereo.tex', 'CyperStereo SDK Documentation',
+     'CyperAI', 'manual'),
 ]
-
-
 # -- Options for manual page output ------------------------------------------
 
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'mynteyessdk', 'MYNT® EYE S SDK Documentation',
+    (master_doc, 'CyperStereosdk', 'CyperStereo SDK Documentation',
      [author], 1)
 ]
-
 
 # -- Options for Texinfo output ----------------------------------------------
 
@@ -183,11 +180,10 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'MYNTEYESSDK', 'MYNT® EYE S SDK Documentation',
-     author, 'MYNTEYESSDK', 'One line description of project.',
+    (master_doc, 'CyperStereoSDK', 'CyperStereo SDK Documentation',
+     author, 'CyperStereoSDK', 'One line description of project.',
      'Miscellaneous'),
 ]
-
 
 # -- Options for Epub output -------------------------------------------------
 
@@ -209,4 +205,4 @@ epub_exclude_files = ['search.html']
 
 # -- Extension configuration -------------------------------------------------
 
-breathe_projects = { 'mynteyes': '_doxygen/xml' }
+breathe_projects = { 'cyperstereo': '_doxygen/xml' }
