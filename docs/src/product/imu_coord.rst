@@ -1,6 +1,6 @@
 .. _product_imu_coord:
 
-IMU 坐标系统
+坐标系
 ==================
 
 .. toctree::
