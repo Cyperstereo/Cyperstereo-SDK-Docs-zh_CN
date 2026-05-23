@@ -12,34 +12,22 @@ SDK的slam文件夹下提供orbslam3的通用配置文件，
 
 .. image:: ../../images/slam/orbslam1.png
 
-如果想要更高的精度，需要根据自己相机的标定文件重新填写cyperstereo_orbslam3_config.yaml文件中的内外参，
-如下图所示，将cyperstereo_imu_calibra-results-imucam.txt文件中的内外参copy到cyperstereo_orbslam3_config.yaml文件中
+需要根据自己相机的标定文件重新生成cyperstereo_sn_**.yaml文件，相机的标定文件根据自己相机的sn码找客服获取。
 
-.. image:: ../../images/slam/orbslam2.png
+如下图所示，使用~/CyperstereoSDK/slam/config/orbslam3下的generate_cyperstereo_yaml.py脚本将自己相机的标定文件写入到cyperstereo_sn_**.yaml文件中
 
-.. image:: ../../images/slam/orbslam3.png
+.. image:: ../../images/slam/orbslam3_config.png
+替换完成后，将cyperstereo_sn_**.yaml文件文件放到如下路径CyperStereo文件夹内
 
-.. image:: ../../images/slam/orbslam4.png
-
-.. image:: ../../images/slam/orbslam5.png
-
-替换完成后，将cyperstereo_orbslam3_config.yaml文件放到如下路径CyperStereo文件夹内
-
-.. image:: ../../images/slam/orbslam6.png
+.. image:: ../../images/slam/orbslam3_config2.png
 
 
-2.运行Cyperstereo节点
-
-.. code-block:: bash
-
-  cd (local path of Cyperstereo)
-  source ./devel/setup.bash
-  rosrun CyperstereoRos capture_image_imu
-
-3.打开另一个命令行运行vins
+2.运行Cyperstereo ORB_SLAM3
 
 .. code-block:: bash
   
-  cd (local path of vins)
-  source ./devel/setup.bash
-  rosrun ORB_SLAM3 Stereo_Inertial Vocabulary/ORBvoc.txt Examples/Stereo-Inertial/cyperstereo_orbslam3_config.yaml true
+  cd ~
+  git clone git@github.com:Cyperstereo/ORB_SLAM3-Cyperstereo.git
+  cd ~/ORB_SLAM3-Cyperstereo
+  bash build.sh
+  ./build/cyperstereo_online Vocabulary/ORBvoc.txt cyperstereo_sn_m007.yaml

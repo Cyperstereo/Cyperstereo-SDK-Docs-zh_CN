@@ -13,12 +13,12 @@ SDK的slam文件夹下提供vins_fusion的通用配置文件，
 
 .. image:: ../../images/slam/vins_fusion3.png
 
-如果想要更高的精度，需要根据自己相机的标定文件重新填写cyperstereo_vins_fusion_config.yaml文件中的内外参，
-如下图所示，将cyperstereo_imu_calibra-results-imucam.txt文件中的内外参copy到cyperstereo_vins_fusion_config.yaml文件中
+需要根据自己相机的标定文件重新生成cyperstereo_vins_fusion_config.yaml文件，相机的标定文件根据自己相机的sn码找客服获取。
 
-.. image:: ../../images/slam/vins_fusion1.png
+如下图所示，使用~/CyperstereoSDK/slam/config/vins-fusion/CyperStereo下的generate_vinsfusion_config.py脚本将自己相机的标定文件写入到cyperstereo_vins_fusion_config.yaml文件中
 
-.. image:: ../../images/slam/vins_fusion2.png
+.. image:: ../../images/slam/vins_fusion_config.png
+
 
 替换完成后，将cyperstereo_vins_fusion_config.yaml文件放到如下路径CyperStereo文件夹内
 
